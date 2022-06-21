@@ -8,7 +8,7 @@
 %define		pname	r8152
 Summary:	A kernel module for Realtek RTL8152/RTL8153 Based USB Ethernet Adapters
 Name:		%{pname}%{_alt_kernel}
-Version:	2.14.0
+Version:	2.16.1
 Release:	%{rel}%{?_pld_builder:@%{_kernel_ver_str}}
 License:	GPL v2
 Group:		Base/Kernel
@@ -16,8 +16,8 @@ URL:		http://www.realtek.com.tw/
 # Check for new versions at
 # https://www.realtek.com/en/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-usb-3-0-software
 # unfortunately this download is not DF-friendly.
-Source0:	%{pname}.53.56-%{version}.tar
-# Source0-md5:	dce21f241bf111526c1cd9d9c487257f
+Source0:	%{pname}-%{version}.tar.bz2
+# Source0-md5:	66ec60f9b775cfe475ec589e6378d7d1
 BuildRequires:	rpmbuild(macros) >= 1.701
 %{expand:%buildrequires_kernel kernel%%{_alt_kernel}-module-build}
 BuildRoot:	%{tmpdir}/%{pname}-%{version}-root-%(id -u -n)
